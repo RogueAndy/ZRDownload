@@ -8,7 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#define IfCondition(condition, xx, ...) {if((condition)) {\
+ITTDPRINT(xx, ##__VA_ARGS__); \
+} \
+
 @interface ZRDownloader : NSObject
+
+@property (nonatomic, strong) void(^progressBlock)(double progress);
+
++ (instancetype)shareInstance;
 
 + (void)beginDownWithURL:(NSString *)url;
 

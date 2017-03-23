@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15741D7F84AD2CC109154D61 /* libPods-ZRDownload.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBEA994064BF2D60EA24D92 /* libPods-ZRDownload.a */; };
 		825A401A1E8369B900C8E9E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A40191E8369B900C8E9E1 /* main.m */; };
 		825A401D1E8369B900C8E9E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A401C1E8369B900C8E9E1 /* AppDelegate.m */; };
 		825A40201E8369B900C8E9E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A401F1E8369B900C8E9E1 /* ViewController.m */; };
@@ -35,6 +36,9 @@
 		825A40361E836B6400C8E9E1 /* RDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDownViewController.m; sourceTree = "<group>"; };
 		825A40381E83726D00C8E9E1 /* ZRDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRDownloader.h; sourceTree = "<group>"; };
 		825A40391E83726D00C8E9E1 /* ZRDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRDownloader.m; sourceTree = "<group>"; };
+		B596B5D9322DCFDB52AC4DF8 /* Pods-ZRDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRDownload.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload.release.xcconfig"; sourceTree = "<group>"; };
+		B751844EDEC4BE3B60068B3B /* Pods-ZRDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRDownload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload.debug.xcconfig"; sourceTree = "<group>"; };
+		BBBEA994064BF2D60EA24D92 /* libPods-ZRDownload.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRDownload.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +46,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15741D7F84AD2CC109154D61 /* libPods-ZRDownload.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E759E8BABF84518550CD844 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B751844EDEC4BE3B60068B3B /* Pods-ZRDownload.debug.xcconfig */,
+				B596B5D9322DCFDB52AC4DF8 /* Pods-ZRDownload.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		825A400C1E8369B700C8E9E1 = {
 			isa = PBXGroup;
 			children = (
 				825A40171E8369B900C8E9E1 /* ZRDownload */,
 				825A40161E8369B900C8E9E1 /* Products */,
+				1E759E8BABF84518550CD844 /* Pods */,
+				E9BA093656253B601437EA11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +134,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E9BA093656253B601437EA11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBBEA994064BF2D60EA24D92 /* libPods-ZRDownload.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 825A402C1E8369B900C8E9E1 /* Build configuration list for PBXNativeTarget "ZRDownload" */;
 			buildPhases = (
+				5ED140C266CD177AC7BA3CD2 /* [CP] Check Pods Manifest.lock */,
 				825A40111E8369B800C8E9E1 /* Sources */,
 				825A40121E8369B800C8E9E1 /* Frameworks */,
 				825A40131E8369B800C8E9E1 /* Resources */,
+				8C4ED50838C45CAF8849CCBE /* [CP] Embed Pods Frameworks */,
+				54B4CB011D28DBB49248B28C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,6 +211,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54B4CB011D28DBB49248B28C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED140C266CD177AC7BA3CD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C4ED50838C45CAF8849CCBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		825A40111E8369B800C8E9E1 /* Sources */ = {
@@ -313,6 +388,7 @@
 		};
 		825A402D1E8369B900C8E9E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B751844EDEC4BE3B60068B3B /* Pods-ZRDownload.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZBB923YFHM;
@@ -326,6 +402,7 @@
 		};
 		825A402E1E8369B900C8E9E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B596B5D9322DCFDB52AC4DF8 /* Pods-ZRDownload.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZBB923YFHM;

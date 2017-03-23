@@ -1,0 +1,12 @@
+PODS:
+  - ZRProgressView (0.0.6)
+
+DEPENDENCIES:
+  - ZRProgressView (~> 0.0.6)
+
+SPEC CHECKSUMS:
+  ZRProgressView: 9ad3e027ca47e2e4f480934f63c7c5be88495a26
+
+PODFILE CHECKSUM: faa9693037cfa63ab2eb50efa858e548a89fcd87
+
+COCOAPODS: 1.1.1

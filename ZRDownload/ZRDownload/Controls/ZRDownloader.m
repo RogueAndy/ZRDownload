@@ -74,7 +74,12 @@ static ZRDownloader *mainDownloader = nil;
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
 
     double currentProgress = totalBytesWritten / (double)totalBytesExpectedToWrite;
-    NSLog(@"------------progress: %f%%", currentProgress);
+//    NSLog(@"------------progress: %f%%", currentProgress);
+    if(self.progressBlock) {
+    
+        self.progressBlock(currentProgress);
+    
+    }
 
 }
 
@@ -94,6 +99,12 @@ static ZRDownloader *mainDownloader = nil;
     NSString *file = [documentPath stringByAppendingString:appendPath];
     
     BOOL remove = [manager removeItemAtPath:file error:nil];
+    if(!remove) {
+        
+        NSLog(@"--------- because can't remove old files, may has some wrong!");
+        return;
+        
+    }
     BOOL success = [manager copyItemAtPath:location.path toPath:file error:nil];
     if(success) {
     
