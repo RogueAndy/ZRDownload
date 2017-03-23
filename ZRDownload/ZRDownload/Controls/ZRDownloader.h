@@ -10,4 +10,6 @@
 
 @interface ZRDownloader : NSObject
 
++ (void)beginDownWithURL:(NSString *)url;
+
 @end

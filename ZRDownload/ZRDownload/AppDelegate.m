@@ -9,7 +9,11 @@
 #import "AppDelegate.h"
 #import "RViewController_1.h"
 
-@interface AppDelegate ()
+typedef void (^CompletionHandlerType)(void) ;
+
+@interface AppDelegate ()<NSURLSessionDelegate>
+
+@property (nonatomic, strong) NSMutableDictionary *completionHandlerDictionary;
 
 @end
 
@@ -55,9 +59,72 @@
 
 - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler {
 
-    
+    NSURLSession *backgroundSession = [self backgroundURLSession];
+    [self addCompletionHandler:completionHandler forSession:backgroundSession];
 
 }
 
+- (NSURLSession *)backgroundURLSession {
+    static NSURLSession *session = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *identifier = @"com.rogue.ZRDownload.backgroundSession";
+        NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:identifier];
+        session = [NSURLSession sessionWithConfiguration:sessionConfig
+                                                delegate:self
+                                           delegateQueue:[NSOperationQueue mainQueue]];
+    });
+    
+    return session;
+}
+
+- (void)addCompletionHandler:(CompletionHandlerType)handler
+                  forSession:(NSString *)identifier {
+
+    if([self.completionHandlerDictionary objectForKey:identifier]) {
+    
+        NSLog(@"Error: Got multiple handlers for a single session identifier.  This should not happen.\n");
+    
+    }
+    
+    [self.completionHandlerDictionary setObject:handler forKey:identifier];
+
+}
+
+- (NSMutableDictionary *)completionHandlerDictionary {
+
+    if(!_completionHandlerDictionary) {
+    
+        _completionHandlerDictionary = [[NSMutableDictionary alloc] init];
+    
+    }
+    
+    return _completionHandlerDictionary;
+
+}
+
+#pragma mark - URLSession Delegate
+
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session {
+
+    if(session.configuration.identifier) {
+    
+        [self callCompletionHandlerForSession:NSURLTypeIdentifierKey];
+    
+    }
+
+}
+
+- (void)callCompletionHandlerForSession:(NSString *)identifier {
+
+    CompletionHandlerType handler = [self.completionHandlerDictionary objectForKey:identifier];
+    if(handler) {
+    
+        [self.completionHandlerDictionary removeObjectForKey:identifier];
+        handler();
+    
+    }
+
+}
 
 @end
