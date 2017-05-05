@@ -6,9 +6,9 @@
 //  Copyright © 2017年 RogueAndy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZRBaseViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : ZRBaseViewController
 
 
 @end

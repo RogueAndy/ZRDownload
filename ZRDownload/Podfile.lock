@@ -15,18 +15,21 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Masonry (1.0.2)
+  - ZRControllerTranstion (0.0.3)
   - ZRProgressView (0.0.6)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - Masonry (~> 1.0.2)
+  - ZRControllerTranstion (~> 0.0.3)
   - ZRProgressView (~> 0.0.6)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  ZRControllerTranstion: 44e394e79cb969bf672b46f5feca38482d14cb9b
   ZRProgressView: 9ad3e027ca47e2e4f480934f63c7c5be88495a26
 
-PODFILE CHECKSUM: 4000a128dfbd01bf0bbd23057d6a41dcc4fcd7de
+PODFILE CHECKSUM: 7ff1b74336d4bd437d2adccba1418f8870367be9
 
 COCOAPODS: 1.1.1
