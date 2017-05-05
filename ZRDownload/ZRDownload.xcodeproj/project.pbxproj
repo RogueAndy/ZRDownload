@@ -17,6 +17,7 @@
 		825A40341E836A0E00C8E9E1 /* RViewController_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A40331E836A0E00C8E9E1 /* RViewController_1.m */; };
 		825A40371E836B6400C8E9E1 /* RDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A40361E836B6400C8E9E1 /* RDownViewController.m */; };
 		825A403A1E83726D00C8E9E1 /* ZRDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A40391E83726D00C8E9E1 /* ZRDownloader.m */; };
+		829A5DE41EBC19D400A74CC1 /* AppIFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829A5DE31EBC19D400A74CC1 /* AppIFViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		825A40361E836B6400C8E9E1 /* RDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDownViewController.m; sourceTree = "<group>"; };
 		825A40381E83726D00C8E9E1 /* ZRDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRDownloader.h; sourceTree = "<group>"; };
 		825A40391E83726D00C8E9E1 /* ZRDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRDownloader.m; sourceTree = "<group>"; };
+		829A5DE21EBC19D400A74CC1 /* AppIFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppIFViewController.h; sourceTree = "<group>"; };
+		829A5DE31EBC19D400A74CC1 /* AppIFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppIFViewController.m; sourceTree = "<group>"; };
 		B596B5D9322DCFDB52AC4DF8 /* Pods-ZRDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRDownload.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload.release.xcconfig"; sourceTree = "<group>"; };
 		B751844EDEC4BE3B60068B3B /* Pods-ZRDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZRDownload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload.debug.xcconfig"; sourceTree = "<group>"; };
 		BBBEA994064BF2D60EA24D92 /* libPods-ZRDownload.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZRDownload.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +126,8 @@
 				825A40331E836A0E00C8E9E1 /* RViewController_1.m */,
 				825A40351E836B6400C8E9E1 /* RDownViewController.h */,
 				825A40361E836B6400C8E9E1 /* RDownViewController.m */,
+				829A5DE21EBC19D400A74CC1 /* AppIFViewController.h */,
+				829A5DE31EBC19D400A74CC1 /* AppIFViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				825A401D1E8369B900C8E9E1 /* AppDelegate.m in Sources */,
 				825A401A1E8369B900C8E9E1 /* main.m in Sources */,
 				825A403A1E83726D00C8E9E1 /* ZRDownloader.m in Sources */,
+				829A5DE41EBC19D400A74CC1 /* AppIFViewController.m in Sources */,
 				825A40341E836A0E00C8E9E1 /* RViewController_1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

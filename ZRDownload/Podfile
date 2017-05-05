@@ -9,4 +9,8 @@ target 'ZRDownload' do
 
 pod 'ZRProgressView', '~> 0.0.6'
 
+pod 'AFNetworking', '~> 3.1.0'
+
+pod 'Masonry', '~> 1.0.2'
+
 end
