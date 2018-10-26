@@ -86,9 +86,9 @@
 		825A40171E8369B900C8E9E1 /* ZRDownload */ = {
 			isa = PBXGroup;
 			children = (
+				82C2C9D52182AFC5001E0D9F /* Views */,
 				825A402F1E8369E900C8E9E1 /* Controls */,
 				825A40301E8369E900C8E9E1 /* ViewControllers */,
-				825A40311E8369E900C8E9E1 /* Views */,
 				825A401B1E8369B900C8E9E1 /* AppDelegate.h */,
 				825A401C1E8369B900C8E9E1 /* AppDelegate.m */,
 				825A401E1E8369B900C8E9E1 /* ViewController.h */,
@@ -132,7 +132,7 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		825A40311E8369E900C8E9E1 /* Views */ = {
+		82C2C9D52182AFC5001E0D9F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -158,8 +158,6 @@
 				825A40111E8369B800C8E9E1 /* Sources */,
 				825A40121E8369B800C8E9E1 /* Frameworks */,
 				825A40131E8369B800C8E9E1 /* Resources */,
-				8C4ED50838C45CAF8849CCBE /* [CP] Embed Pods Frameworks */,
-				54B4CB011D28DBB49248B28C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,49 +216,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54B4CB011D28DBB49248B28C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5ED140C266CD177AC7BA3CD2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZRDownload-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8C4ED50838C45CAF8849CCBE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZRDownload/Pods-ZRDownload-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,35 +1,42 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Masonry (1.0.2)
+  - Masonry (1.1.0)
   - ZRControllerTranstion (0.0.3)
   - ZRProgressView (0.0.6)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.1.0)
-  - Masonry (~> 1.0.2)
+  - AFNetworking (~> 3.2.1)
+  - Masonry (~> 1.1.0)
   - ZRControllerTranstion (~> 0.0.3)
   - ZRProgressView (~> 0.0.6)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - Masonry
+    - ZRControllerTranstion
+    - ZRProgressView
+
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ZRControllerTranstion: 44e394e79cb969bf672b46f5feca38482d14cb9b
   ZRProgressView: 9ad3e027ca47e2e4f480934f63c7c5be88495a26
 
-PODFILE CHECKSUM: 7ff1b74336d4bd437d2adccba1418f8870367be9
+PODFILE CHECKSUM: 7343fdbf4179c866ce4ec577c9db59a66d295c5b
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.0
